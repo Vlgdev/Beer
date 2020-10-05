@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#app {
+  font-family: 'Roboto';
+}
+
+.container {
+  max-width: 730px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+label + input,
+label + textarea {
+  margin-top: 7px;
+}
+
+input,
+textarea {
+  display: block;
+  outline: none;
+  border: 1px solid $yellow;
+}
+
+input {
+  padding: 7px 10px;
+}
+
+textarea {
+  padding: 10px;
+  resize: none;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 5px;
+    background: $yellow;
+  }
+  &::-webkit-scrollbar-track {
+    width: 5px;
+    box-shadow: inset  0 0 3px rgba(#000, .3);
+  }
+}
+
+.btn {
+  padding: .4em 1em;
+  background: $yellow;
+}
+
+.btn-delete {
+  background: rgb(238, 43, 43);
+  color: #ffffff;
+}
+
+.btn-black {
+  background: #3a3a3a;
+  color: #ffffff;
+}

@@ -1,0 +1,133 @@
+@import './fonts';
+@import './vars';
+@import './global';
+
+#app {
+  padding: 30px 0;
+}
+
+.title {
+  margin: 0 0 30px;
+  text-align: center;
+  font-size: 32px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 1px;
+    background: $yellow;
+  }
+}
+
+.beer-list {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    & + & {
+      border-top: 1px solid #3a3a3a;
+    }
+    &-content {
+      max-width: 500px;
+      width: 100%;
+    }
+    &-head {
+      margin-bottom: 13px;
+    }
+    &-num {
+      font-weight: 700;
+    }
+    &-title {
+      font-weight: 700;
+    }
+    &-edit {
+      margin-right: 10px;
+    }
+    &-info {
+      & + & {
+        margin-top: 8px;
+      }
+    }
+    &-btns {
+      margin-top: 13px;
+    }
+    &-img img {
+      max-height: 250px;
+    }
+  }
+}
+
+.load-more {
+  padding-top: 30px;
+  text-align: center;
+  &__btn {
+    padding: 0.7em 1.5em;
+  }
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(#3a3a3a, .7);
+  &__content {
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    position: relative;
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  &::before,
+  &::after {
+    content: '';
+    height: 15px;
+    width: 2px;
+    background: #3a3a3a;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  &::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.edit-form {
+  width: 100%;
+  &__name,
+  &__descr {
+    width: 100%;
+  }
+  &__name {
+    margin-bottom: 15px;
+  }
+  &__descr {
+    margin-bottom: 15px;
+    height: 150px;
+  }
+}
