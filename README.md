@@ -1,4 +1,4 @@
-# artsurf
+# Beer
 
 ## Project setup
 ```
